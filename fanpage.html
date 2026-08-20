@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sabrina Carpenter | Fanpage</title>
+
+  <style>
+    :root {
+      --cream: #fff8f1;
+      --ink: #302433;
+      --pink: #f4a9c8;
+      --blue: #8fc8e8;
+      --lilac: #c7b4e8;
+      --red: #d65d63;
+      --sage: #a9c6ad;
+      --card: rgba(255, 255, 255, 0.74);
+      --shadow: 0 18px 45px rgba(48, 36, 51, 0.14);
+      --glass: rgba(255, 255, 255, 0.28);
+      --glass-border: rgba(255, 255, 255, 0.48);
+      --glass-highlight: rgba(255, 255, 255, 0.65);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 10% 10%, #9cc9ed, transparent 28%),
+        radial-gradient(circle at 90% 30%, #f3b6d0, transparent 30%),
+        var(--cream);
+      background-attachment: fixed;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+    }
+
+    body.dark {
+      --cream: #211b29;
+      --ink: #fff8f1;
+      --card: rgba(55, 42, 62, 0.8);
+      --shadow: 0 18px 45px rgba(0, 0, 0, 0.3);
+    }
+
+    header {
+      position: fixed;
+      top: 1.25rem;
+      left: 50%;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: min(92%, 760px);
+      padding: 0.65rem 0.75rem 0.65rem 1.25rem;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.65);
+      border-radius: 999px;
+      background:
+        linear-gradient(
+          120deg,
+          rgba(255, 255, 255, 0.58),
+          rgba(255, 255, 255, 0.2) 45%,
+          rgba(244, 169, 200, 0.24)
+        );
+      box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.85),
+        inset 0 -1px 1px rgba(255, 255, 255, 0.2),
+        0 10px 30px rgba(48, 36, 51, 0.18),
+        0 0 0 1px rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(30px) saturate(180%);
+      -webkit-backdrop-filter: blur(30px) saturate(180%);
+      transform: translateX(-50%);
+    }
+
+    header::before {
+      position: absolute;
+      top: 0;
+      left: 8%;
+      width: 45%;
+      height: 1px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.95);
+      content: "";
+      filter: blur(1px);
+      pointer-events: none;
+    }
+
+    header::after {
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(
+        115deg,
+        rgba(255, 255, 255, 0.2),
+        transparent 35%,
+        rgba(255, 255, 255, 0.08)
+      );
+      content: "";
+      pointer-events: none;
+    }
+
+    header > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo,
+    nav a,
+    nav button {
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+    }
+
+    .logo {
+      color: var(--red);
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    nav a {
+      display: block;
+      padding: 0.55rem 0.9rem;
+      border-radius: 999px;
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.42);
+      transform: translateY(-1px);
+    }
+
+    nav button {
+      display: grid;
+      width: 2.3rem;
+      height: 2.3rem;
+      margin-left: 0.3rem;
+      padding: 0;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.65);
+      background: rgba(255, 255, 255, 0.3);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, sans-serif;
+      font-weight: 700;
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.7);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 4rem;
+      min-height: 82vh;
+      padding: 8rem 9% 5rem;
+    }
+
+    .eyebrow {
+      color: var(--red);
+      font-size: 0.85rem;
+      font-weight: bold;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0.5rem 0 1rem;
+      font-size: clamp(3.5rem, 9vw, 8rem);
+      line-height: 0.88;
+      letter-spacing: -0.07em;
+    }
+
+    h1 span {
+      color: var(--red);
+    }
+
+    .hero p {
+      max-width: 580px;
+      font-size: 1.15rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    @property --glow-angle {
+      syntax: "<angle>";
+      initial-value: 0deg;
+      inherits: false;
+    }
+
+    .hero-actions .primary {
+      position: relative;
+      isolation: isolate;
+      border: 3px solid transparent;
+      background:
+        linear-gradient(rgba(214, 93, 99, 0.95), rgba(214, 93, 99, 0.95)) padding-box,
+        conic-gradient(
+          from var(--glow-angle),
+          #6fffff,
+          #9c8cff,
+          #ff62dc,
+          #ffffff,
+          #6fffff
+        ) border-box;
+      box-shadow:
+        0 0 8px #6fffff,
+        0 0 18px #b56cff,
+        0 0 35px rgba(255, 98, 220, 0.85);
+      animation: rotateNeonBorder 3s linear infinite;
+    }
+
+    .hero-actions .primary::before {
+      position: absolute;
+      z-index: -1;
+      inset: -7px;
+      border-radius: inherit;
+      background: conic-gradient(
+        from var(--glow-angle),
+        #6fffff,
+        #9c8cff,
+        #ff62dc,
+        #ffffff,
+        #6fffff
+      );
+      content: "";
+      filter: blur(12px);
+      opacity: 0.85;
+      animation: rotateNeonBorder 3s linear infinite;
+    }
+
+    @keyframes rotateNeonBorder {
+      to {
+        --glow-angle: 360deg;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero-actions .primary,
+      .hero-actions .primary::before {
+        animation: none;
+      }
+    }
+
+    button {
+      border: 0;
+      border-radius: 999px;
+      color: var(--ink);
+      cursor: pointer;
+      font: inherit;
+      padding: 0.7rem 1rem;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    button:hover {
+      opacity: 0.85;
+      transform: translateY(-2px);
+    }
+
+    .primary {
+      background: rgba(214, 93, 99, 0.86);
+      color: white;
+    }
+
+    .portrait {
+      position: relative;
+      min-height: 470px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.65);
+      border-radius: 45% 45% 18px 18px;
+      background: var(--lilac);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.7),
+        0 25px 60px rgba(48, 36, 51, 0.25);
+      transform: rotate(2deg);
+    }
+
+    .portrait img {
+      width: 100%;
+      height: 100%;
+      min-height: 470px;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    section {
+      padding: 5rem 9%;
+    }
+
+    .section-heading {
+      margin-bottom: 2rem;
+      font-size: clamp(2rem, 5vw, 3.8rem);
+      line-height: 1;
+    }
+
+    .bio,
+    .interactive {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .bio-card,
+    .fact-box,
+    .album {
+      padding: 2rem;
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      background: var(--glass);
+      box-shadow:
+        inset 0 1px 0 var(--glass-highlight),
+        var(--shadow);
+      backdrop-filter: blur(24px) saturate(150%);
+      -webkit-backdrop-filter: blur(24px) saturate(150%);
+    }
+
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .fact {
+      padding: 1.4rem;
+      border-radius: 18px;
+      background: var(--blue);
+    }
+
+    .fact:nth-child(2) {
+      background: var(--pink);
+    }
+
+    .fact:nth-child(3) {
+      background: var(--sage);
+    }
+
+    .fact strong {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .album-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .album {
+      min-height: 210px;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+    }
+
+    .album h3 {
+      font-size: 1.5rem;
+    }
+
+    .album:nth-child(1) { background: var(--blue); }
+    .album:nth-child(2) { background: var(--lilac); }
+    .album:nth-child(3) { background: var(--pink); }
+    .album:nth-child(4) { background: var(--sage); }
+
+    .fact-box {
+      text-align: center;
+    }
+
+    #factText {
+      min-height: 75px;
+      margin: 1.5rem 0;
+      font-size: 1.3rem;
+    }
+
+    footer {
+      padding: 2rem 9%;
+      background: var(--ink);
+      color: var(--cream);
+      text-align: center;
+    }
+
+    @media (max-width: 800px) {
+      header {
+        top: 0.75rem;
+        padding-left: 1rem;
+      }
+
+      nav a {
+        display: none;
+      }
+
+      .hero,
+      .bio,
+      .interactive {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 7rem;
+      }
+
+      .portrait,
+      .portrait img {
+        min-height: 360px;
+      }
+
+      .facts,
+      .album-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .music-videos {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at center, rgba(120, 82, 155, 0.45), transparent 58%),
+        linear-gradient(180deg, #170d25 0%, #301437 100%);
+      color: #fff8f1;
+    }
+
+    .music-videos::before,
+    .music-videos::after {
+      position: absolute;
+      top: -10%;
+      z-index: -1;
+      width: 22%;
+      height: 125%;
+      content: "";
+      background: linear-gradient(
+        90deg,
+        #160b20,
+        #542044 45%,
+        #241027
+      );
+      box-shadow: 0 0 45px rgba(255, 92, 190, 0.25);
+    }
+
+    .music-videos::before {
+      left: -5%;
+      border-radius: 0 45% 45% 0;
+      transform: rotate(7deg);
+    }
+
+    .music-videos::after {
+      right: -5%;
+      border-radius: 45% 0 0 45%;
+      transform: rotate(-7deg);
+    }
+
+    .music-videos .eyebrow {
+      color: #ffafd9;
+    }
+
+    .music-videos .section-heading {
+      text-shadow: 0 0 22px rgba(255, 166, 220, 0.45);
+    }
+
+    .video-card {
+      position: relative;
+      max-width: 1050px;
+      margin: 0 auto;
+      overflow: hidden;
+      border: 10px solid #0b0710;
+      border-radius: 12px;
+      background: #08050b;
+      box-shadow:
+        0 0 0 2px rgba(255, 255, 255, 0.15),
+        0 0 35px rgba(255, 94, 203, 0.4),
+        0 25px 70px rgba(0, 0, 0, 0.55);
+    }
+
+    .video-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .video-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      border: 0;
+    }
+
+    .video-info {
+      background: linear-gradient(90deg, #160d1e, #321634);
+    }
+
+    .video-info h3 {
+      color: #ffd4ec;
+    }
+
+    .video-info p {
+      color: #fff8f1;
+    }
+
+    .watch-link {
+      display: inline-block;
+      margin: 1.25rem 2rem 1.5rem;
+      color: var(--red);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .watch-link:hover {
+      text-decoration: underline;
+    }
+
+    .screen-label {
+      padding: 0.45rem;
+      background: #0b0710;
+      color: #ffafd9;
+      font-family: Inter, ui-sans-serif, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">SC ✦ FANPAGE</div>
+
+    <nav aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#albums">Albums</a>
+      <a href="#music-videos">Music</a>
+      <a href="#fun">Fun</a>
+      <button id="themeButton" type="button" aria-label="Toggle dark mode">☾</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Actress · Singer · Songwriter</p>
+        <h1>Sabrina<br /><span>Carpenter</span></h1>
+        <p>
+          A celebration of Sabrina's playful lyricism, powerhouse vocals,
+          unforgettable performances, and unmistakable pop-star sparkle.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#about"><button class="primary" type="button">Explore her world</button></a>
+          <a href="#fun"><button type="button">Get a fun fact</button></a>
+        </div>
+      </div>
+
+      <div class="portrait">
+        <img
+          src="images/Sabrina_Carpenter.webp"
+          alt="Sabrina Carpenter performing in a sparkling silver outfit"
+        />
+      </div>
+    </section>
+
+    <section id="about">
+      <p class="eyebrow">The story so far</p>
+      <h2 class="section-heading">Small town beginnings,<br />big pop moments.</h2>
+
+      <div class="bio">
+        <article class="bio-card">
+          <p>
+            Sabrina Carpenter is an American singer, songwriter, and actress
+            known for her witty lyrics, bright vocals, and magnetic stage
+            presence. She first gained recognition as an actor before building
+            a successful music career.
+          </p>
+          <br />
+          <p>
+            From heartfelt ballads to cheeky pop anthems, Sabrina's music blends
+            classic songwriting with a fresh, playful attitude.
+          </p>
+        </article>
+
+        <div class="facts">
+          <article class="fact">
+            <strong>01</strong>
+            She began posting singing videos online as a child.
+          </article>
+          <article class="fact">
+            <strong>02</strong>
+            She is also an accomplished actress and performer.
+          </article>
+          <article class="fact">
+            <strong>03</strong>
+            Her songs are celebrated for clever, conversational lyrics.
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="albums">
+      <p class="eyebrow">Colour-coded eras</p>
+      <h2 class="section-heading">The Sabrina soundtrack</h2>
+
+      <div class="album-grid">
+        <article class="album">
+          <h3>Eyes Wide Open</h3>
+          <p>Dreamy beginnings and honest songwriting.</p>
+        </article>
+
+        <article class="album">
+          <h3>emails i can't send</h3>
+          <p>Vulnerable stories with a sharp pop edge.</p>
+        </article>
+
+        <article class="album">
+          <h3>Short n' Sweet</h3>
+          <p>Confident, catchy, and effortlessly fun.</p>
+        </article>
+
+        <article class="album">
+          <h3>Man's Best Friend</h3>
+          <p>A bold new chapter full of personality.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="fun">
+      <div class="interactive">
+        <div>
+          <p class="eyebrow">Interactive corner</p>
+          <h2 class="section-heading">Need a little<br />Sabrina sparkle?</h2>
+          <p>Press the button for a random fan fact.</p>
+        </div>
+
+        <div class="fact-box">
+          <h3>Fun fact generator ✦</h3>
+          <p id="factText">Your next fact is waiting...</p>
+          <button id="factButton" class="primary" type="button">Reveal a fact</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="music-videos" class="music-videos">
+      <p class="eyebrow">Watch the music</p>
+      <h2 class="section-heading">Sabrina on screen</h2>
+
+      <article class="video-card">
+        <div class="screen-label">NOW PLAYING ✦</div>
+
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/YcSP1ZUf1eQ?rel=0"
+            title="Sabrina Carpenter - Nonsense (Official Video)"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="video-info">
+          <h3>Nonsense ✦</h3>
+          <p>
+            Watch Sabrina's playful music video and enjoy one of her most
+            memorable pop eras.
+          </p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    Made with love for Sabrina Carpenter fans ✦
+  </footer>
+
+  <script>
+    const facts = [
+      "Sabrina has performed on some of the world's biggest stages.",
+      "She is known for mixing humor and vulnerability in her songwriting.",
+      "Her music often turns everyday relationship moments into memorable hooks.",
+      "Sabrina has balanced acting, singing, dancing, and songwriting throughout her career.",
+      "Her live performances are known for their energy, choreography, and playful crowd interaction."
+    ];
+
+    const factText = document.querySelector("#factText");
+    const factButton = document.querySelector("#factButton");
+    const themeButton = document.querySelector("#themeButton");
+
+    factButton.addEventListener("click", () => {
+      const randomFact = facts[Math.floor(Math.random() * facts.length)];
+      factText.textContent = randomFact;
+    });
+
+    themeButton.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      themeButton.textContent = document.body.classList.contains("dark") ? "☀" : "☾";
+    });
+  </script>
+</body>
+</html>
