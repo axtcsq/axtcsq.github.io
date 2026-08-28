@@ -263,6 +263,127 @@ footer {
   line-height: 1.6;
 }
 
+/* Flight Section Title */
+.flight-title {
+  text-align: center;
+
+  margin: 45px 0 25px;
+
+  color: white;
+
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* Flight Display Board */
+.flight-board {
+  width: calc(100% - 40px);
+  max-width: 900px;
+  margin: 0 auto 50px;
+  padding: 20px;
+  box-sizing: border-box;
+
+  background: #101214;
+  color: #f2f2f2;
+
+  border: 2px solid #303438;
+  border-radius: 8px;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.4),
+    inset 0 0 25px rgba(255, 255, 255, 0.03);
+
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 1px;
+}
+
+/* Board Header */
+.flight-board-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 8px 4px 16px;
+
+  border-bottom: 2px solid #3b3f42;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* Flight Information Rows */
+.flight-row {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 0.7fr 1.2fr;
+
+  gap: 15px;
+  align-items: center;
+
+  padding: 15px 8px;
+
+  border-bottom: 1px solid #2d3033;
+
+  font-size: 0.9rem;
+}
+
+/* Column Headers */
+.flight-heading {
+  color: #8f969b;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+/* Flight Information */
+.flight-row:not(.flight-heading) span {
+  font-weight: 700;
+}
+
+/* YouTube Video */
+.flight-video {
+  margin-top: 20px;
+
+  background: #08090a;
+
+  border: 1px solid #3b3f42;
+
+  padding: 8px;
+}
+
+.flight-video iframe {
+  display: block;
+
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+
+  border: 0;
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+  .flight-board {
+    width: calc(100% - 20px);
+    padding: 12px;
+  }
+
+  .flight-row {
+    grid-template-columns: 0.9fr 1.8fr 0.6fr 1fr;
+
+    gap: 8px;
+
+    padding: 12px 4px;
+
+    font-size: 0.7rem;
+  }
+
+  .flight-board-header {
+    font-size: 0.7rem;
+  }
+}
+
 /* Back to Top */
 .back-to-top {
   position: fixed;
@@ -313,4 +434,287 @@ footer {
 .back-to-top:hover {
   background: rgba(255, 255, 255, 0.22);
   transform: translateY(-3px);
+}
+
+/* LinkedIn Button */
+.linkedin-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  width: fit-content;
+  margin: 25px auto 0;
+  padding: 10px 20px 10px 14px;
+
+  background: #0a66c2;
+  color: white;
+
+  border: none;
+  border-radius: 999px;
+
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20);
+
+  transition: all 0.25s ease;
+}
+
+.linkedin-button:hover {
+  background: #004182;
+  color: white;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* LinkedIn Logo */
+.linkedin-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 24px;
+  height: 24px;
+
+  background: white;
+  color: #0a66c2;
+
+  border-radius: 25px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.linkedin-button:hover .linkedin-logo {
+  color: #004182;
+}
+
+/* Disabled Buttons */
+.disabled {
+  pointer-events: none;
+  opacity: 0.4;
+  cursor: default;
+}
+
+/* WIP Notice */
+.wip-staris {
+  width: min(720px, calc(100% - 40px));
+
+  margin: 0 auto 35px;
+
+  box-sizing: border-box;
+
+  font-family:
+    'Segoe UI',
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
+}
+
+
+/* Physical Display Enclosure */
+.wip-staris-frame {
+  position: relative;
+
+  padding: 7px;
+
+  background: linear-gradient(
+    145deg,
+    #4b4f52 0%,
+    #25282a 18%,
+    #111315 55%,
+    #35393b 100%
+  );
+
+  border: 1px solid #080909;
+  border-radius: 5px;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.4),
+    inset 0 1px 1px rgba(255, 255, 255, 0.18),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.65);
+}
+
+
+/* Display Screen */
+.wip-staris-screen {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  min-height: 42px;
+
+  padding: 0 15px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, 0.025),
+      rgba(0, 0, 0, 0.08)
+    ),
+    #101615;
+
+  border: 1px solid #050606;
+  border-radius: 2px;
+
+  color: #f3f0d0;
+
+  box-shadow:
+    inset 0 0 12px rgba(0, 0, 0, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+
+/* Display Scan Lines */
+.wip-staris-screen::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 7px;
+
+  pointer-events: none;
+
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.018) 0,
+    rgba(255, 255, 255, 0.018) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
+
+/* Warning Icon */
+.wip-staris-icon {
+  position: relative;
+
+  z-index: 2;
+
+  flex: 0 0 auto;
+
+  font-size: 1.05rem;
+  line-height: 1;
+
+  filter: grayscale(0.1) brightness(1.1);
+}
+
+
+/* Scrolling Display */
+
+.wip-marquee {
+  position: relative;
+
+  z-index: 2;
+
+  flex: 1;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+}
+
+
+.wip-marquee-track {
+  display: flex;
+
+  width: max-content;
+
+  animation: wip-scroll 10s linear infinite;
+}
+
+
+.wip-marquee-track span {
+  flex-shrink: 0;
+
+  padding-right: 90px;
+
+  color: #f5f1c8;
+
+  font-size: 1rem;
+
+  font-weight: 650;
+
+  letter-spacing: 1.2px;
+
+  text-shadow:
+    0 0 5px rgba(255, 245, 180, 0.22);
+}
+
+
+/* Display Label */
+.wip-staris-label {
+  width: fit-content;
+
+  margin: 4px 0 0 14px;
+
+  padding: 2px 8px;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 0.58rem;
+
+  font-weight: 600;
+
+  letter-spacing: 1.2px;
+
+  text-transform: uppercase;
+}
+
+
+/* Scrolling Animation */
+@keyframes wip-scroll {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+
+}
+
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+  .wip-marquee-track {
+    animation: none;
+  }
+
+}
+
+
+/* Mobile */
+@media (max-width: 650px) {
+
+  .wip-staris {
+    width: calc(100% - 20px);
+  }
+
+  .wip-staris-screen {
+    min-height: 38px;
+
+    padding: 0 10px;
+  }
+
+  .wip-marquee-track span {
+    font-size: 0.68rem;
+
+    letter-spacing: 0.8px;
+  }
 }

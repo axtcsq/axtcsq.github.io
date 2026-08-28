@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Home</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/message-code.png">
+
+    <!-- Links External CSS -->
+     <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body id="top">
+    <!-- Nav Bar -->
+    <ul class="navbar">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./wad2.html" class="active">WAD2</a></li>
+        <li><a href="#Projects">Projects</a></li>
+        <li><a href="#Contact">Contact</a></li>
+    </ul>
+
+    <!-- YouTube: Favourite Travel Destination -->
+    <h1 class="flight-title">Favourite Travel Destination</h1>
+
+    <section class="flight-board">
+        <div class="flight-board-header">
+            <span>DEPARTURES</span>
+        </div>
+
+        <div class="flight-row flight-heading">
+            <span>FLIGHT</span>
+            <span>DESTINATION</span>
+            <span>GATE</span>
+            <span>STATUS</span>
+        </div>
+
+        <div class="flight-row">
+            <span>IS 216</span>
+            <span>London (🇬🇧 United Kingdom)</span>
+            <span>A01</span>
+            <span>DEPARTING</span>
+        </div>
+
+        <div class="flight-video">
+            <iframe
+                src="https://www.youtube.com/embed/45ETZ1xvHS0?si=10O4_AeoV4wf213V&autoplay=1&mute=1"
+                title="Favourite Travel Destination"
+                frameborder="0"
+                allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Back to Top -->
+    <a href="#top" class="back-to-top" id="backToTop">↑</a>
+
+    <!-- Footer -->
+    <footer>
+        <br>
+
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Pages</h3>
+                <a href="./index.html">Home</a>
+                <a href="#Projects">Projects</a>
+                <a href="#Contact">Contact</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <a href="mailto:alexander.t.2025@computing.smu.edu.sg">Email</a>
+                <a href="https://www.linkedin.com/in/axtcsq/" target="_blank">LinkedIn</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Portfolio</h3>
+                <a href="https://github.com/axtcsq" target="_blank">GitHub</a>
+            </div>
+        </div>
+
+        <p class="footer-updated">Last updated on 28 Aug 2026</p>
+    </footer>
+
+    <!-- Javascript for Back to Top button visible logic -->
+    <script>
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+
+</html>
