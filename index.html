@@ -39,17 +39,17 @@
 
         <div class="window-content">
             <p>
-                An SMU sophomore currently studying Information Systems. With a long-standing passion in the tech industry, I have an interest in designing how a system should look and feel to users and in deciphering how a system works as a whole.
+                Currently an SMU sophomore studying Information Systems with a long-standing passion for technology. My interests lies in both how systems work and how they look and feel to users, particularly where technology and user experience intersect.
 
                 <br><br>
 
-                As technology constantly evolves, I am driven by curiosity while also desiring to enhance the lives of others and make a positive impact by leveraging tech through projects, teamwork, or from learning something new!
+                As technology continues to evolve, I'm driven by curiosity and a desire to keep learning. I hope to use what I learn to create meaningful solutions, improve people's lives, and make a positive impact through projects, teamwork, and continuous growth.
             </p>
         </div>
     </div>
 
     <!-- Back to Top -->
-    <a href="#top" class="back-to-top">↑</a>
+    <a href="#top" class="back-to-top" id="backToTop">↑</a>
 
     <!-- Footer -->
     <footer>
@@ -77,6 +77,19 @@
 
         <p class="footer-updated">Last updated on 28 Aug 2026</p>
     </footer>
+
+    <!-- Javascript for Back to Top button visible logic -->
+    <script>
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+    </script>
 </body>
 
 </html>
