@@ -2,27 +2,89 @@
 
 
 /* 0) Base page */
-
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: lightgrey;
+    margin: auto;
+}
 
 /* 1) Container */
-
+.container {
+    padding: 25px;
+}
 
 /* 2) Section heading */
-
+h2 {
+    text-align: center;
+}
 
 /* 3) Cards wrapper (center all cards horizontally) */
-
+.cards {
+    display: grid;
+    
+    /* repeat(3, 1fr) means 3 equal columns */
+    grid-template-columns: repeat(3, 1fr);
+    /* OR grid-template-columns: 1fr 1fr 1fr; */
+    
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
 /* 4) Card (size, spacing, border, rounded corners) */
-
+.card {
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+}
 
 /* 5) Card text (h3 title, paragraph blurb) */
+.card h3, .card .blurb {
+    padding-left: 15px;
+    padding-right: 15px;
 
+}
 
 /* 6) Card image (fit within card, centered) */
-
+img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
 
 /* 7) Hover state: change border to green, then make it wigglew */
+.card:hover {
+    border-color: red;
+
+    /* whole wiggle takes 0.3 seconds */
+    animation: wiggle 0.3s ease-in-out;
+}
+
+/*     
+    0% → starts normally
+    25% → rotates 2° left
+    50% → rotates 2° right
+    75% → rotates 2° left
+    100% → returns to normal 
+*/
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
+    75% { transform: rotate(-2deg); }
+    100% { transform: rotate(0deg); }
+}
 
 
 /* 8) Footer */
+.site-footer {
+    text-align: center;
+}
+
+.attractions {
+    padding: 10px;
+    border-bottom: 1px solid grey;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
