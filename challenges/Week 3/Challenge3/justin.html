@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 3 - Justin</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Bieber Fever</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Gallery</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="row">
+            <!-- Header Section -->
+            <div class="col-12 text-center my-4">
+                <h1>Justin Bieber Fan Page</h1>
+                <p class="lead">A simple fan page dedicated to the Beliebers!</p>
+            </div>
+        </div>
+
+        <!-- Task 1
+             - Gallery Carousel Placeholder
+             - Add your carousel here 
+             - Slideshow image files are:
+                justin1.jpg
+                justin2.jpg
+                justin3.jpg
+        -->
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./justin1.jpg" class="d-block w-100" alt="...">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="./justin2.jpg" class="d-block w-100" alt="...">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="./justin3.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    
+        <div class="row mt-5">
+
+            <div class="child col-md-6 text-center">
+                <img src="justin_concert.jpg" 
+                class="img-fluid rounded" alt="Justin Bieber">
+            </div>
+
+            <div class="child col-md-6 my-2">
+
+                <h2>About Justin Bieber</h2>
+
+                <p>Justin Drew Bieber was born on March 1, 1994, in Stratford, Ontario, Canada. He was raised by his mother, Pattie Mallette. She worked at several jobs to support herself and her son. As a young child, Justin loved to play chess and sports, especially hockey and soccer. He also loved music and learned to play guitar, drums, piano, and trumpet.</p>
+
+                <p>In 2007, he entered a local singing contest and won second place. His mother posted a video of his performance on YouTube. She later added other homemade videos of Justin singing and playing guitar. A music promoter saw Justin's videos and invited him to record songs at a studio in Atlanta, Georgia. While there, Justin met Usher. Usher helped Justin get a record deal in late 2008.</p>
+            </div>
+
+        </div>
+
+
+        <!-- Buttons and Alerts -->
+        <div class="row">
+            <button class="btn btn-custom mb-3 mt-3" onclick="alert('You are now a Belieber!')">Join the Beliebers</button>
+            <a href="https://www.justinbiebermusic.com" class="btn btn-primary" target="_blank">Learn More</a>
+
+            <!-- Task 2
+             - Modal Button
+             - Add a button here to trigger the modal -->
+            
+             <!-- Button trigger modal -->
+            <button type="button" class="btn btn-success mb-3 mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Sign Up for Fan Club
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        
+                        <!-- Trigger Button -->
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Join the Justin Bieber Fan Club</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!-- Form -->
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Your name">
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="name@example.com">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="msg" class="form-label">Message</label>
+                                    <input type="textarea" class="form-control" id="msg" placeholder="Why do you love Justin?">
+                                </div>    
+                            </form>
+                        </div>
+                        
+                        <!-- Action Buttons -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+</body>
+</html>

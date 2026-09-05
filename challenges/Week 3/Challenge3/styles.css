@@ -1,0 +1,42 @@
+body {
+    background-color: #f8f9fa;
+}
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    color: #343a40;
+}
+
+.lead {
+    color: #6c757d;
+}
+
+h2 {
+    color: #495057;
+}
+
+p {
+    color: #212529;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Custom Button Styles */
+.btn-custom {
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+}
+
+.btn-custom:hover {
+    background-color: #ff3333;
+}
+
+/* Navbar Styles */
+.navbar-dark .navbar-brand {
+    color: #ff5c5c;
+}

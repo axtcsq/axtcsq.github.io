@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 2 - Justin</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Task 1
+             - Add a navigtion bar
+        -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand text-danger" href="#">Bieber Fever</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Gallery</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="row">
+            <div class="col-12 text-center my-4">
+                <h1>Justin Bieber Fan Page</h1>
+                <p class="lead">A simple fan page dedicated to the Beliebers!</p>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-6 text-center">
+                <img src="./justin_concert.jpg" 
+                class="img-fluid rounded" alt="Justin Bieber">
+            </div>
+
+            <div class="col-md-6 my-2">
+
+                <h2>About Justin Bieber</h2>
+
+                <p>Justin Drew Bieber was born on March 1, 1994, in Stratford, Ontario, Canada. He was raised by his mother, Pattie Mallette. She worked at several jobs to support herself and her son. As a young child, Justin loved to play chess and sports, especially hockey and soccer. He also loved music and learned to play guitar, drums, piano, and trumpet.</p>
+
+                <p>In 2007, he entered a local singing contest and won second place. His mother posted a video of his performance on YouTube. She later added other homemade videos of Justin singing and playing guitar. A music promoter saw Justin's videos and invited him to record songs at a studio in Atlanta, Georgia. While there, Justin met Usher. Usher helped Justin get a record deal in late 2008.</p>
+            </div>
+
+        </div>
+
+        <!-- Task 2
+             - Add 2 buttons
+        -->
+        <div class="d-grid gap-2">
+            <!-- Alerts -->
+            <div id="liveAlertPlaceholder"></div>
+            <button type="button" class="btn btn-danger" id="liveAlertBtn">Join the Beliebers</button>
+
+            <!-- Learn More -->
+            <a href="https://www.justinbiebermusic.com" class="btn btn-primary" type="button" target="_blank">Learn More</a>
+        </div>
+
+    </div>
+    
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+    <!-- Alert's JavaScript -->
+    <script>
+        const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+        const appendAlert = (message, type) => {
+        const wrapper = document.createElement('div')
+        wrapper.innerHTML = [
+            `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+            `   <div>${message}</div>`,
+            '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+            '</div>'
+        ].join('')
+
+        alertPlaceholder.append(wrapper)
+        }
+
+        const alertTrigger = document.getElementById('liveAlertBtn')
+        if (alertTrigger) {
+        alertTrigger.addEventListener('click', () => {
+            appendAlert('"You are now a Belieber!"', 'success')
+        })
+        }
+    </script>
+
+</body>
+</html>
