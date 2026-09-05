@@ -1,5 +1,5 @@
 /* Nav Bar */
-.navbar {
+.site-navbar {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +27,7 @@
     inset 0 1px 1px rgba(255, 255, 255, 0.20);
 }
 
-.navbar li a {
+.site-navbar li a {
   display: block;
 
   color: rgba(255, 255, 255, 0.95);
@@ -42,12 +42,12 @@
   transition: all 0.25s ease;
 }
 
-.navbar li a:hover {
+.site-navbar li a:hover {
   background: rgba(255, 255, 255, 0.14);
   color: white;
 }
 
-.navbar li a.active {
+.site-navbar li a.active {
   background: rgba(255, 255, 255, 0.20);
   color: white;
 
@@ -76,6 +76,7 @@ body {
 /* Typing Animation */
 .typing-text {
   text-align: center;
+  color: white;
 
   width: 0;
   margin: 40px auto;
@@ -203,6 +204,14 @@ footer {
 
   overflow: hidden;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.30);
+}
+
+/* Keep Bootstrap container-fluid while retaining the original window dimensions */
+.mac-window.container-fluid {
+  width: calc(100% - 40px);
+  max-width: 800px;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .window-header {
@@ -436,62 +445,101 @@ footer {
   transform: translateY(-3px);
 }
 
-/* LinkedIn Button */
-.linkedin-button {
+/* Projects Carousel Window */
+.projects-window {
+  max-width: 1100px;
+}
+
+.projects-content {
+  padding: 0;
+}
+
+.projects-content .carousel {
+  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+  flex-direction: column;
 
-  width: fit-content;
-  margin: 25px auto 0;
-  padding: 10px 20px 10px 14px;
+  /* Shared background */
+  background: rgba(20, 20, 25, 0.96);
+}
 
-  background: #0a66c2;
-  color: white;
+/* Project Image */
+.projects-content .carousel-item img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+
+  margin: 0;
 
   border: none;
-  border-radius: 999px;
-
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 600;
-
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20);
-
-  transition: all 0.25s ease;
+  border-radius: 0;
 }
 
-.linkedin-button:hover {
-  background: #004182;
+/* Project Description */
+.projects-content .project-caption {
+  padding: 20px 35px 12px;
+
+  background: transparent;
   color: white;
 
-  transform: translateY(-2px);
+  text-align: center;
 
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
 }
 
-/* LinkedIn Logo */
-.linkedin-logo {
-  display: flex;
-  align-items: center;
+.projects-content .project-caption h5 {
+  margin: 0 0 8px;
+
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.projects-content .project-caption p {
+  max-width: 800px;
+  margin: 0 auto;
+
+  line-height: 1.5;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+/* Carousel Indicators */
+.projects-content .carousel-inner {
+  order: 1;
+}
+
+.projects-content .carousel-indicators {
+  order: 2;
+
+  position: static;
+
+  margin: 0;
+  padding: 8px 0 18px;
+
   justify-content: center;
 
-  width: 24px;
-  height: 24px;
-
-  background: white;
-  color: #0a66c2;
-
-  border-radius: 25px;
-
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  font-weight: 800;
-  line-height: 1;
-  letter-spacing: -1px;
+  background: transparent;
 }
 
-.linkedin-button:hover .linkedin-logo {
-  color: #004182;
+.projects-content .carousel-indicators [data-bs-target] {
+  width: 30px;
+  height: 3px;
+
+  margin: 0 4px;
+}
+
+/* Carousel Controls */
+.projects-content .carousel-control-prev,
+.projects-content .carousel-control-next {
+  top: 0;
+  bottom: auto;
+
+  height: calc(100% - 85px);
 }

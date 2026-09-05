@@ -8,16 +8,18 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./images/message-code.png">
-    <!-- Links External CSS -->
-     <link rel="stylesheet" href="./css/main.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
 <body id="top">
     <!-- Nav Bar -->
-    <ul class="navbar">
-        <li><a href="./index.html" class="active">Home</a></li>
+    <ul class="site-navbar">
+        <li><a href="./index.html" class="active"><strong>Home</strong></a></li>
         <li><a href="./wad2.html">WAD2</a></li>
-        <li><a href="#Projects">Projects</a></li>
+        <li><a href="./projects.html">Projects</a></li>
         <li><a href="#Contact">Contact</a></li>
     </ul>
     
@@ -26,7 +28,7 @@
     <img src="./images/user.jpeg" alt="" srcset="">
 
     <!-- About -->
-    <div class="mac-window">
+    <div class="mac-window container-fluid">
         <div class="window-header">
             <div class="traffic-lights">
                 <span class="traffic-light close"></span>
@@ -44,15 +46,14 @@
                 <br><br>
 
                 As technology continues to evolve, I'm driven by curiosity and a desire to keep learning. I hope to use what I learn to create meaningful solutions, improve people's lives, and make a positive impact through projects, teamwork, and continuous growth.
+                <br><br>
             </p>
 
+           <!-- LinkedIn Button -->
             <a href="https://www.linkedin.com/in/axtcsq/"
                 target="_blank"
-                class="linkedin-button"
-                aria-label="Connect with me on LinkedIn">
-
-                <span class="linkedin-logo" aria-hidden="true">in</span>
-                <span>Connect with me on LinkedIn</span>
+                class="btn btn-light rounded-pill d-block mx-auto w-50">
+                <strong>Connect with me on LinkedIn</strong>
             </a>
         </div>
     </div>
@@ -68,7 +69,7 @@
             <div class="footer-section">
                 <h3>Pages</h3>
                 <a href="./index.html">Home</a>
-                <a href="#Projects">Projects</a>
+                <a href="./projects.html">Projects</a>
                 <a href="#Contact">Contact</a>
             </div>
 
@@ -99,6 +100,9 @@
             }
         });
     </script>
+
+    <!-- Bootstrap JavaScript CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 
 </html>
