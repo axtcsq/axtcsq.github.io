@@ -56,6 +56,31 @@
     0 2px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Mobile Navigation */
+@media (max-width: 650px) {
+  .site-navbar {
+    width: calc(100% - 20px);
+    max-width: calc(100% - 20px);
+    box-sizing: border-box;
+    padding: 4px;
+  }
+
+  .site-navbar li {
+    flex: 1;
+  }
+
+  .site-navbar li a {
+    padding: 9px 7px;
+    font-size: 0.85rem;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
+
 /* Background Image */
 body {
   background-image: url(../images/background.png);
@@ -187,6 +212,25 @@ footer {
   text-align: center;
   font-size: 0.85rem;
   opacity: 0.7;
+}
+
+@media (max-width: 650px) {
+  .footer-content {
+    width: 100%;
+    max-width: none;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .footer-section {
+    min-width: 0;
+  }
+
+  .footer-section h3,
+  .footer-section a {
+    white-space: nowrap;
+    font-size: 0.9rem;
+  }
 }
 
 /* macOS Window */
