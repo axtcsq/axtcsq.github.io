@@ -8,13 +8,18 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./images/message-code.png">
-    <!-- External CSS -->
+    <!-- My CSS -->
     <link rel="stylesheet" href="./css/main.css">
     <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
 <body id="top">
+    <!-- Theme Switcher -->
+    <button id="themeToggle" class="theme-toggle" type="button">
+        Light Mode
+    </button>
+    
     <!-- Nav Bar -->
     <ul class="site-navbar">
         <li><a href="./index.html" class="active"><strong>Home</strong></a></li>
@@ -88,19 +93,8 @@
         <p class="footer-updated">Last updated on 5 Sept 2026</p>
     </footer>
 
-    <!-- Javascript for Back to Top button visible logic -->
-    <script>
-        const backToTop = document.getElementById('backToTop');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 200) {
-                backToTop.classList.add('show');
-            } else {
-                backToTop.classList.remove('show');
-            }
-        });
-    </script>
-
+    <!-- My JS -->
+    <script src="./js/main.js"></script>
     <!-- Bootstrap JavaScript CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>

@@ -587,3 +587,182 @@ footer {
 
   height: calc(100% - 85px);
 }
+
+/* Light Mode Theme */
+body.light-mode {
+  /*
+    Keep the original background photo.
+    We only change the colours of the
+    elements on top of it.
+  */
+  background-image: url(../images/background.png);
+  color: #222;
+}
+
+/* Nav Bar */
+body.light-mode .site-navbar {
+  background: rgba(255, 255, 255, 0.78);
+
+  border-color: rgba(0, 0, 0, 0.15);
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.15),
+    inset 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+body.light-mode .site-navbar li a {
+  color: #222;
+  text-shadow: none;
+}
+
+body.light-mode .site-navbar li a:hover {
+  background: rgba(0, 0, 0, 0.08);
+  color: #111;
+}
+
+/* Active page: Black background + white text so it is easy to read */
+body.light-mode .site-navbar li a.active {
+  background: #000;
+  color: #fff;
+
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.15),
+    0 2px 12px rgba(0, 0, 0, 0.20);
+}
+
+/* Main Heading */
+body.light-mode .typing-text {
+  color: white;
+  text-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* About Window */
+body.light-mode .mac-window {
+  background: rgba(255, 255, 255, 0.94);
+  color: #222;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode .window-header {
+  background: rgba(0, 0, 0, 0.05);
+  border-bottom-color:
+    rgba(0, 0, 0, 0.10);
+}
+
+body.light-mode .window-title {
+  color: #222;
+}
+
+body.light-mode .window-content p {
+  color: #222;
+}
+
+/* LinkedIn Button */
+body.light-mode .window-content .btn-light {
+  background-color: #000;
+  border-color: #000;
+  color: white;
+}
+
+body.light-mode .window-content .btn-light:hover {
+  background-color: #222;
+  border-color: #222;
+  color: white;
+}
+
+/* Flight Board */
+body.light-mode .flight-title {
+  color: white;
+  text-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+body.light-mode .flight-board {
+  background: #fff;
+  color: #222;
+  border-color: #ccc;
+}
+
+body.light-mode .flight-board-header {
+  border-bottom-color: #ccc;
+}
+
+body.light-mode .flight-row {
+  border-bottom-color: #ddd;
+}
+
+body.light-mode .flight-heading {
+  color: #666;
+}
+
+/* Projects */
+body.light-mode .projects-content .carousel {
+  background: #fff;
+}
+
+body.light-mode .projects-content .project-caption {
+  color: #222;
+  border-top-color: #ddd;
+}
+
+body.light-mode .projects-content .project-caption p {
+  color: #444;
+}
+
+/* Back to Top */
+body.light-mode .back-to-top {
+  color: #222;
+  background: rgba(255, 255, 255, 0.78);
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode .back-to-top:hover {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  z-index: 1001;
+  padding: 9px 15px;
+
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  border-radius: 999px;
+
+  background: rgba(20, 20, 25, 0.65);
+  color: white;
+  cursor: pointer;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition: all 0.25s ease;
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* Light Mode Toggle */
+body.light-mode .theme-toggle {
+  background: white;
+  color: #222;
+  border-color: #ccc;
+}
+
+body.light-mode .theme-toggle:hover {
+  background: #eee;
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+  .theme-toggle {
+    top: 75px;
+    right: 10px;
+    padding: 7px 11px;
+    font-size: 0.8rem;
+  }
+}
