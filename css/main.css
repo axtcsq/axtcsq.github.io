@@ -81,18 +81,31 @@
   }
 }
 
-/* Background Image */
-body {
+/* Full iPhone viewport background */
+html {
+  min-height: 100%;
   background-image: url(../images/background.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  background-color: #5f666b;
+}
+
+/* Background Image */
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  margin: 0;
+
+  background-image: url(../images/background.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: transparent;
 
   color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-  min-height: 100vh;
-  margin: 0;
 
   display: flex;
   flex-direction: column;
@@ -589,13 +602,21 @@ footer {
 }
 
 /* Light Mode Theme */
-body.light-mode {
-  /*
-    Keep the original background photo.
-    We only change the colours of the
-    elements on top of it.
-  */
+html:has(body.light-mode) {
   background-image: url(../images/background.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #5f666b;
+}
+
+body.light-mode {
+  background-image: url(../images/background.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: transparent;
+
   color: #222;
 }
 

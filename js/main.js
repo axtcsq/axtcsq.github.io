@@ -17,10 +17,24 @@ const savedTheme = localStorage.getItem('theme');
 const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)');
 
 function applyTheme(theme) {
+    const html = document.documentElement;
+    const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+
     if (theme === 'light') {
         document.body.classList.add('light-mode');
+        html.classList.add('light-mode');
+
+        if (themeColorMeta) {
+            themeColorMeta.setAttribute('content', '#5f666b');
+        }
+
     } else {
         document.body.classList.remove('light-mode');
+        html.classList.remove('light-mode');
+
+        if (themeColorMeta) {
+            themeColorMeta.setAttribute('content', '#5f666b');
+        }
     }
 
     if (themeToggle) {
