@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Alice",
+    "day": "Monday",
+    "time": 800
+  },
+  {
+    "id": 2,
+    "name": "Bob",
+    "day": "Saturday",
+    "time": 800
+  },
+  {
+    "id": 3,
+    "name": "Charlie",
+    "day": "Saturday",
+    "time": 1800
+  }
+]
